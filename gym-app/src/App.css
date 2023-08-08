@@ -1,0 +1,22 @@
+.LeftSideC
+{
+    margin-left: 12px;
+    border: 1px solid #F00;
+    background: #FCFCFC;
+    color: #F00;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ulli
+{
+    text-decoration-line: none;
+    text-decoration: none;
+    text-shadow: none;
+    text-underline-offset: none;
+}
+.ulli :hover
+{
+    color: #F00;
+}

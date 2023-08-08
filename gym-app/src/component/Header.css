@@ -1,0 +1,23 @@
+.brand-name
+{
+    color : #F00;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.navbarM
+{
+    border: 1px solid rgb(231, 221, 221);
+    background: #FCFCFC;
+    border-radius: 10px;
+}
+.LoginButton {
+    display: inline-flex;
+    padding: 05px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid #F00;
+    background: #e9dada;
+    color: #F00;
+}
