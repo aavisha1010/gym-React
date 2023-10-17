@@ -28,7 +28,7 @@ function MemberEng() {
   const [time_slot_expected, setTimeSlot] = useState('');
   const [status, setStatus] = useState('Pending');
   const [activity, setActivity] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(10);
 
@@ -37,6 +37,7 @@ function MemberEng() {
     ApiService.getListOfBatches().then(
       (response) => {
         setBatches(response);
+        setLoading(false)
       },
       (error) => {
         toast.warn("Batches not Loading")

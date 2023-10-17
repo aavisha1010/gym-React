@@ -72,7 +72,7 @@ function NewMember() {
         
         ApiService.getSinglePackage({ pid }).then(
             (response) => {
-                setPackages(response);
+                return setPackages(response);
                 
             }, (error) => {
                 alert("Package Error")
@@ -93,6 +93,7 @@ function NewMember() {
 
     const onSubmitEnqForm = (e) => {
         e.preventDefault();
+        alert(packages+"  "+batches)
 
         const newmember = {memberenquiry,packages,start_date,comment,discount,batches}
       // alert(moment(startDate).format('DD-MM-YYYY'))
@@ -178,7 +179,7 @@ function NewMember() {
                                 <FormGroup>
                         <Label for="batches">Batches</Label>
                         <select className='form-batches' name='batches' value={batches}
-                          onChange={(e) => singleBatch(e.target.value)}
+                          onChange={(e) => setBatches(e.target.value)}
                         >
                           {
                             batchData.map((e, key) => {
@@ -192,7 +193,7 @@ function NewMember() {
                                 <FormGroup>
                                     <Label for="packages">Package</Label>
                                     <select className='form-control' name='packages' value={packages}
-                                        onChange={(e) => singlePackage(e.target.value) && setPackages(e.target.value)}
+                                        onChange={(e) => setPackages(e.target.value)}
                                     >
                                         {
                                             packdata.map((e, key) => {
